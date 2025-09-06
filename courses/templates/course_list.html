@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}Course List{% endblock title %}
+
+{% block content %}
+<h1>Course List</h1>
+<ul>
+    {% for course in course_list %}
+        <li>
+            {{ course.title }}
+            {% comment %} <a href="{% url 'course_update' course.pk %}">{{ course.title }}</a> {% endcomment %}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
